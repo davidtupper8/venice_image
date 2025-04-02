@@ -168,7 +168,7 @@ if "analysis_prompt" in st.session_state:
         for model in models_list:
             st.session_state[f"cfg_scale_{model}"] = st.session_state.master_cfg_scale
 
-    master_cfg_scale = st.slider("CFG Scale", min_value=0.0, max_value=20.0, value=20.0, step=0.5, 
+    master_cfg_scale = st.slider("CFG Scale", min_value=0.0, max_value=20.0, value=3.0, step=0.5, 
                                  key="master_cfg_scale", on_change=sync_cfg_scale)
     
     aspect = st.selectbox("Select Aspect Ratio", 
